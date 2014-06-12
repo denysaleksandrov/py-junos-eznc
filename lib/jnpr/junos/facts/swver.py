@@ -15,7 +15,7 @@ class version_info(object):
         if 'X' == self.type:
             # assumes form similar to "45-D10", so extract the bits from this
             xm = re.match("(\d+)-(\w)(.*)", self.minor)
-            if xm != None:   # if False then X release is Subsciber Management                                 
+            if xm != None:   # if False, then X release is Subscriber Management                                 
                 self.minor = tuple(
                     [int(xm.group(1)), xm.group(2), int(xm.group(3))])
             if len(after_type) < 2:
